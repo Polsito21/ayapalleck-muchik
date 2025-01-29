@@ -1,0 +1,595 @@
+/* Fuente global */
+* {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente específica para elementos generales */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #141414;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+.header-content {
+    background-color: #ffffff;
+    border-bottom: 2px solid #c9a223;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content nav a {
+    font-weight: bold;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.header-content nav a:hover {
+    color: #d4af37;
+}
+
+.header-content img {
+    width: 150px;
+    height: auto;
+}
+
+/* Contenedor de la imagen con overlay */
+.hotel-photo {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hotel-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-photo .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hotel-photo .overlay h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Aplicar fuente específica */
+}
+
+.hotel-photo .overlay p {
+    font-size: 1.5rem;
+    color: #f1c40f;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Aplicar fuente específica */
+}
+
+/* Botón de reserva */
+.reserve-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 2px solid #c9a223;
+    padding: 15px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.reserve-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Sección Servicios */
+.services {
+    background-color: #141414;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 200px;
+}
+
+.service-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease;
+    opacity: 0.8;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(212, 175, 55, 0.5);
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(100%) brightness(1.2);
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Sección Habitaciones */
+.rooms {
+    background-color: #141414;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rooms h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.room-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.room {
+    background-color: rgba(34, 33, 36, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #d4af37;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.room:hover img {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+.room h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.room p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.room button {
+    background-color: #d4af37;
+    color: #141414;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.room button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* Sección Ubicación */
+.ubicacion {
+    background-color: #141414;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ubicacion h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.ubicacion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.ubicacion-content img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.ubicacion-content p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+    background-color: #141414;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.sobre-nosotros h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+}
+
+.sobre-nosotros-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.sobre-nosotros-content img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-nosotros-content p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Formulario de Reserva */
+.reserve-form {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.7); /* Sombra dorada */
+    z-index: 10000;
+    max-width: 400px;
+    width: 90%;
+    transition: all 0.3s ease;
+}
+
+.reserve-form h2 {
+    text-align: center;
+    color: #5b870e;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.reserve-form input[type="datetime-local"],
+.reserve-form input[type="text"],
+.reserve-form input[type="email"],
+.reserve-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif; /* Mantener fuente del cuerpo para campos de entrada */
+}
+
+.reserve-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #141414;
+    font-family: 'Cinzel', serif;
+}
+
+.reserve-form input[type="submit"] {
+    background-color: #1fbf06;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reserve-form input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.reserve-form button.cancel {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+}
+
+.reserve-form button.cancel:hover {
+    background-color: #e03e3e;
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay-form {
+    display: none; /* Se mantiene oculta por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+/* Modal de Confirmación */
+.confirmation-modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.7); /* Sombra dorada */
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.confirmation-content h2 {
+    color: #141414;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.confirmation-content p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif; /* Mantener fuente del cuerpo */
+}
+
+.confirmation-content button {
+    background-color: #d4af37;
+    color: #141414;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirmation-content button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* Modal de Error */
+.error-modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10002;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.7); /* Sombra roja */
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.error-content h2 {
+    color: #141414;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.error-content p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif; /* Mantener fuente del cuerpo */
+}
+
+.error-content button {
+    background-color: #ff4d4d;
+    color: #141414;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Konkhmer Sleokchher', sans-serif; /* Cambiar tipo de letra */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.error-content button:hover {
+    background-color: #e03e3e;
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .services-list,
+    .room-list,
+    .ubicacion-content,
+    .sobre-nosotros-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item,
+    .room,
+    .ubicacion-content img,
+    .sobre-nosotros-content img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .hotel-photo .overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .hotel-photo .overlay p {
+        font-size: 1.2rem;
+    }
+
+    .ubicacion-content p,
+    .sobre-nosotros-content p {
+        font-size: 16px;
+    }
+
+}
+
+/* Estilos específicos para el enlace de ubicación */
+.ubicacion-content a.ubicacion-link {
+    display: inline-block; /* Asegura que el enlace se ajuste al tamaño de la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+.ubicacion-content a.ubicacion-link:hover {
+    transform: scale(1.05); /* Efecto de escalado al pasar el cursor */
+    opacity: 0.8; /* Reducir la opacidad al pasar el cursor */
+}
+
+.ubicacion-content a.ubicacion-link img {
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la imagen */
+    transition: opacity 0.3s ease;
+}
+
+.ubicacion-content a.ubicacion-link:hover img {
+    opacity: 0.8; /* Reduce la opacidad para dar feedback visual */
+}
+
+/* Asegura que los enlaces fuera del header no tengan subrayados */
+body a {
+    text-decoration: none;
+    color: inherit;
+}
