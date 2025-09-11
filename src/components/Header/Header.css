@@ -1,0 +1,341 @@
+/* HEADER - ESTILOS ELEGANTES Y PROFESIONALES */
+.header {
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(15px);
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.header.scrolled {
+  background: rgba(5, 5, 5, 0.99);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.logo span {
+  color: #D4AF37;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Estilos para botones de navegación */
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.nav-link-btn:hover {
+  color: #D4AF37;
+}
+
+.nav-link-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link-btn:hover::after {
+  width: 100%;
+}
+
+/* BOTÓN DE RESERVA ELEGANTE */
+.btn-reserva {
+  background: transparent;
+  color: #FFFFFF !important;
+  padding: 12px 28px !important;
+  border: 1px solid #D4AF37 !important;
+  border-radius: 2px;
+  font-weight: 400 !important;
+  transition: all 0.4s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.btn-reserva::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #D4AF37;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.btn-reserva:hover {
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-reserva:hover::before {
+  left: 0;
+}
+
+.btn-reserva:hover::after {
+  display: none;
+}
+
+/* MENU TOGGLE ELEGANTE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #FFFFFF;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+  display: block;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #D4AF37;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background: #D4AF37;
+}
+
+/* RESPONSIVE ELEGANTE */
+@media (max-width: 968px) {
+  .nav-links {
+    gap: 30px;
+  }
+  
+  .nav-link-btn {
+    font-size: 14px;
+  }
+  
+  .btn-reserva {
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.99);
+    backdrop-filter: blur(20px);
+    transition: left 0.4s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 40px;
+  }
+  
+  .nav.active {
+    left: 0;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .nav-link-btn {
+    font-size: 16px;
+    padding: 15px 0;
+    width: 100%;
+    display: block;
+  }
+  
+  .btn-reserva {
+    padding: 15px 35px !important;
+    font-size: 15px !important;
+    margin-top: 10px;
+    border-width: 1.5px !important;
+  }
+  
+  .logo h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .logo h1 {
+    font-size: 20px;
+  }
+  
+  .nav-link-btn {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+  
+  .btn-reserva {
+    padding: 12px 28px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* GARANTIZAR QUE NO HAYA ELEMENTOS FANTASMA */
+*:focus {
+  outline: none;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+::-moz-selection {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+/* ELIMINAR CUALQUIER PUNTO O LÍNEA BLANCA */
+.header::before,
+.header::after,
+.header-content::before,
+.header-content::after,
+.nav::before,
+.nav::after,
+.nav-links::before,
+.nav-links::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* PREVENIR SELECTION DE TEXTO */
+.header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ESTILOS PARA ENLACES NORMALES (por si acaso) */
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #D4AF37;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

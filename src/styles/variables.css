@@ -1,0 +1,18 @@
+:root {
+  --font-elegant: 'Cormorant Garamond', serif;
+  --font-modern: 'Montserrat', sans-serif;
+  --color-black: #000000;
+  --color-gold: #D4AF37;
+  --color-dark-gold: #B8860B;
+  --color-white: #FFFFFF;
+  --color-light: #F8F9FA;
+  --color-gray: #2D3748;
+  --color-light-gray: #718096;
+  --color-dark-bg: #1A202C;
+  --color-border: #E2E8F0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --radius: 6px;
+  --transition: all 0.3s ease;
+}

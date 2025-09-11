@@ -1,0 +1,141 @@
+.rooms {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--color-gray);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: var(--font-elegant);
+    letter-spacing: 0.5px;
+}
+
+.section-title p {
+    color: var(--color-light-gray);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: var(--font-modern);
+    font-weight: 300;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.room-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.room-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.room-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.room-content {
+    padding: 25px;
+}
+
+.room-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--color-gray);
+    font-weight: 600;
+    font-family: var(--font-elegant);
+}
+
+.room-features {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.room-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
+    font-family: var(--font-modern);
+    font-weight: 300;
+}
+
+.room-features i {
+    color: var(--color-gold);
+    margin-right: 12px;
+    font-size: 12px;
+    width: 16px;
+}
+
+.room-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin: 20px 0;
+    text-align: center;
+    font-family: var(--font-elegant);
+}
+
+.room-card .btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-modern);
+}
+
+.room-card .btn:hover {
+    background: var(--color-dark-gold);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .rooms {
+        padding: 60px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .room-image {
+        height: 200px;
+    }
+    
+    .room-content {
+        padding: 20px;
+    }
+}
